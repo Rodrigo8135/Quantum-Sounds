@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Sounds - Simulador de Audio Cuántico</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0a0a0b, #121214);
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #00bcd4;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+    }
+
+    section {
+      background-color: #1a1a1c;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      max-width: 750px;
+      width: 90%;
+      margin: 1rem 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      border: 1px solid #333;
+    }
+
+    .concept-border { border-left: 5px solid #4caf50; }
+    .control-border { border-left: 5px solid #ff9800; }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-top: 0;
+      color: #f0f0f0;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      line-height: 1.7;
+      padding-left: 1.2rem;
+      list-style-type: square;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+
+    li b { color: #00bcd4; }
+
+    #status {
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      border-radius: 12px;
+      background-color: #1f1f1f;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      border: 2px solid #00bcd4;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    kbd {
+      background-color: #333;
+      border-radius: 4px;
+      border: 1px solid #555;
+      color: #fff;
+      display: inline-block;
+      font-size: 0.9em;
+      font-weight: 700;
+      padding: 2px 6px;
+      margin: 0 2px;
+      box-shadow: 0 2px 0 #000;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1.5rem 0;
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      #status { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Quantum Sounds</h1>
+
+  <section class="concept-border">
+    <h2>Mapeo Psicoacústico</h2>
+    <ul>
+      <li><b>Qubits:</b> Representados por osciladores independientes (Grave: |0⟩ / Agudo: |1⟩).</li>
+      <li><b>Superposición:</b> Se percibe como la mezcla armónica de ambos tonos simultáneamente.</li>
+      <li><b>Entrelazamiento:</b> Detectable mediante la correlación espacial (estéreo) y batidos de frecuencia.</li>
+      <li><b>Fase Cuántica:</b> Codificada en la interferencia sonora y el paneo dinámico.</li>
+    </ul>
+  </section>
+
+  <div id="status" aria-live="polite">
+    PRESIONA CUALQUIER TECLA PARA INICIAR
+  </div>
+
+  <section class="control-border">
+    <h2>Consola de Operaciones</h2>
+    <ul style="list-style-type: none; padding-left: 0;">
+      <li><kbd>↑</kbd> <b>Puerta Hadamard (H):</b> Crea superposición en Qubit A.</li>
+      <li><kbd>C</kbd> <b>Puerta CNOT:</b> Entrelaza A (control) con B (objetivo).</li>
+      <li><kbd>←</kbd> <b>Puerta Z / Fase:</b> Invierte la fase relativa (genera batido).</li>
+      <li><kbd>→</kbd> <b>Puerta Pauli-X en B:</b> Invierte el estado lógico del Qubit B.</li>
+      <li><kbd>Espacio</kbd> <b>Medición:</b> Colapsa la función de onda a un estado clásico.</li>
+      <li><kbd>Enter</kbd> <b>Reset:</b> Reinicia el sistema al estado base |00⟩.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Proyecto de Investigación: Sonificación de Sistemas Cuánticos · UNMSM
+  </footer>
+
+  <script src="quantum1.js"></script>
+
+</body>
+</html>
