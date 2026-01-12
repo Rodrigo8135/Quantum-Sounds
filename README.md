@@ -18,7 +18,7 @@ Este proyecto mapea el álgebra lineal de los estados cuánticos a parámetros a
 
 ---
 
-## Tecnologías Utilizadas
+## Herramientas Utilizadas
 
 * **Web Audio API:** Motor principal para la generación y manipulación de ondas senoidales, nodos de ganancia (GainNodes) y paneo estéreo en tiempo real.
 * **JavaScript :** Lógica matemática para el procesamiento de las amplitudes cuánticas y simulación de compuertas.
@@ -43,7 +43,7 @@ Puedes manipular el estado cuántico utilizando los siguientes controles:
 
 ## Simulación del Colapso 
 
-La medición no es azarosa, sigue la **Regla de Born**. El sistema utiliza una simulación de Monte Carlo para determinar el resultado clásico final basado en las probabilidades actuales:
+El sistema utiliza una simulación de Monte Carlo para determinar el resultado clásico final basado en las probabilidades actuales:
 $$P(i) = |a_i|^2$$
 
 
